@@ -85,6 +85,11 @@ translate("הוספת פיצה להזמנה"); // "Add פיצה to the order"  (
 t(translate, "משהו אחר");       // falls back to the original text
 ```
 
+## Example
+
+`example/index.html` is a small Hebrew page with an English switch. Serve the folder (for example
+`python -m http.server`) and open `/example/?lang=en`.
+
 ## Tests
 
 ```sh
