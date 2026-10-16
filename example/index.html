@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>מסעדה לדוגמה</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 36rem; margin: 2rem auto; padding: 0 1rem; }
+    button { font: inherit; padding: .5rem 1rem; }
+  </style>
+</head>
+<body>
+  <h1>מסעדה לדוגמה</h1>
+  <p>
+    ברוכים הבאים. אפשר להזמין
+    מהשולחן ולשלם מהטלפון.
+  </p>
+  <p data-no-i18n>דנה כהן, רחוב הרצל 1</p>
+  <input placeholder="מה תרצו להזמין?">
+  <button id="add">הוספת סלט להזמנה</button>
+  <p><a href="?lang=en">English</a> · <a href="?lang=he">עברית</a></p>
+  <ul id="log"></ul>
+
+  <script type="module">
+    import { localize, pickLanguage } from "../src/browser.js";
+    const en = {
+      "מסעדה לדוגמה": "Example restaurant",
+      "ברוכים הבאים. אפשר להזמין מהשולחן ולשלם מהטלפון.": "Welcome. Order from the table and pay from your phone.",
+      "מה תרצו להזמין?": "What would you like to order?",
+      "הוספת {dish} להזמנה": "Add {dish} to the order",
+      "{dish} נוסף להזמנה": "{dish} was added to the order",
+      "סלט": "Salad",
+    };
+    if (pickLanguage() === "en") localize(document.documentElement, en);
+    // Rendered later, still translated: the observer catches it.
+    document.getElementById("add").addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = "סלט נוסף להזמנה";
+      document.getElementById("log").append(li);
+    });
+  </script>
+</body>
+</html>

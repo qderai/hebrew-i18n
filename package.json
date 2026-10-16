@@ -1,0 +1,18 @@
+{
+  "name": "@qderai/hebrew-i18n",
+  "version": "0.1.0",
+  "description": "Translate a Hebrew-first site by its own text: one dictionary keyed by the Hebrew, applied in the browser and on Cloudflare Workers alike.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Qder AI (https://qder.ai)",
+  "repository": { "type": "git", "url": "git+https://github.com/qderai/hebrew-i18n.git" },
+  "keywords": ["hebrew", "i18n", "rtl", "translation", "cloudflare-workers", "htmlrewriter", "israel"],
+  "exports": {
+    ".": "./src/core.js",
+    "./browser": "./src/browser.js",
+    "./worker": "./src/worker.js"
+  },
+  "files": ["src", "LICENSE", "NOTICE"],
+  "scripts": { "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" }
+}
