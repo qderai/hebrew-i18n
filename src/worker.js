@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 /**
  * The same translation on the server, for readers that run no JavaScript (search and AI crawlers): a Cloudflare
  * Workers HTMLRewriter pass over the Hebrew page, using the very translator the browser uses (core.js).

@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 /**
  * The translator: a dictionary keyed by the Hebrew text as it appears on the page.
  *

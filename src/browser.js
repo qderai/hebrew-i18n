@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 /**
  * Translate a Hebrew page in the browser without a second copy of the page: text nodes and the attributes a person
  * reads are rewritten in place, and a MutationObserver keeps doing it for whatever a script renders later
